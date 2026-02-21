@@ -56,5 +56,67 @@
       </div>
       <hr class="text-gray-200 mb-6" />
     </header>
+    <!-- main section -->
+    <main>
+      <!-- available jobs section -->
+      <section class="space-y-5">
+        <div class="space-y-5">
+          <!-- available jobs header -->
+          <div class="flex items-center">
+            <h3 class="flex-1 text-3xl text-gray-700 font-bold">
+              Available Jobs
+            </h3>
+            <p class="font-medium text-gray-400"><span>8</span> jobs</p>
+          </div>
+          <!-- toggle buttons -->
+          <div>
+            <button class="btn btn-primary">All</button>
+            <button class="btn bg-base-100 text-gray-500 mx-3">
+              Interview
+            </button>
+            <button class="btn bg-base-100 text-gray-500">Rejected</button>
+          </div>
+        </div>
+        <!-- available jobs cards container -->
+        <div>
+          <!-- available jobs card 1 -->
+          <div class="flex bg-base-100 p-5 rounded-lg">
+            <!-- jobs card left -->
+            <div class="flex-1 space-y-3">
+              <h3 class="text-2xl font-bold">Mobile First Corp</h3>
+              <p class="font-semibold text-gray-500">React Native Developer</p>
+              <p class="text-gray-500 font-semibold">
+                <small>Remote . Full-time . $130,000 - $175,000</small>
+              </p>
+              <!-- job status -->
+              <p>
+                <span
+                  class="text-[14px] font-bold text-gray-700 bg-blue-50 px-3 py-2 rounded-md"
+                  >Not Applied</span
+                >
+              </p>
+              <p class="text-gray-600">
+                Build cross-platform mobile applications using React Native.
+                Work on products used by millions of users worldwide.
+              </p>
+              <div class="flex gap-3">
+                <button class="btn btn-outline btn-success font-bold">
+                  interview
+                </button>
+                <button class="btn btn-outline btn-error font-bold">
+                  Rejected
+                </button>
+              </div>
+            </div>
+            <!-- jobs card right -->
+            <div
+              class="border border-gray-300 w-10 h-10 rounded-full flex justify-center items-center"
+            >
+              <i class="fa-solid fa-trash text-gray-500"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
