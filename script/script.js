@@ -1,4 +1,20 @@
+// get total jobs length with type
+const totalCountElements = document.querySelectorAll(".total-count");
+let totalInterviewJobsCount = document.getElementById("interview-count");
+let totalRejectedJobsCount = document.getElementById("rejected-count");
+// get all jobs container
+const allJobs = document.querySelector("#jobs-container");
+
+// get all filter buttons
 const buttons = document.querySelectorAll(".filter-btn");
+
+// calculate total count of jobs
+function calculateCount() {
+  const count = allJobs.children.length;
+  totalCountElements.forEach((el) => {
+    el.innerText = count;
+  });
+}
 
 buttons.forEach((button) => {
   button.addEventListener("click", function () {
@@ -13,3 +29,6 @@ buttons.forEach((button) => {
     this.classList.add("btn-primary", "scale-105", "shadow-lg");
   });
 });
+
+// call the calculate total jobs function globally
+calculateCount();

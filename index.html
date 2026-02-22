@@ -43,15 +43,15 @@
       <div class="grid grid-cols-3 gap-5">
         <div class="bg-blue-100 p-5 rounded-lg">
           <p class="text-[14px] font-medium text-gray-600">Total</p>
-          <p class="text-2xl font-bold text-blue-500">8</p>
+          <p class="text-2xl font-bold text-blue-500 total-count">0</p>
         </div>
         <div class="bg-green-100 p-5 rounded-lg">
           <p class="text-[14px] font-medium text-gray-600">Interview</p>
-          <p class="text-2xl font-bold text-green-500">0</p>
+          <p class="text-2xl font-bold text-green-500" id="interview-count">0</p>
         </div>
         <div class="bg-red-100 p-5 rounded-lg">
           <p class="text-[14px] font-medium text-gray-600">Rejected</p>
-          <p class="text-2xl font-bold text-red-500">0</p>
+          <p class="text-2xl font-bold text-red-500" id="rejected-count">0</p>
         </div>
       </div>
       <hr class="text-gray-200 mb-6" />
@@ -66,37 +66,9 @@
             <h3 class="flex-1 text-3xl text-gray-700 font-bold">
               Available Jobs
             </h3>
-            <p class="font-medium text-gray-400"><span>8</span> jobs</p>
+            <p class="font-medium text-gray-400"><span class="total-count">0</span> jobs</p>
           </div>
-          <!-- toggle buttons
-          <div>
-            <button class="btn btn-primary">All</button>
-            <button class="btn bg-base-100 text-gray-500 mx-3">
-              Interview
-            </button>
-            <button class="btn bg-base-100 text-gray-500">Rejected</button>
-          </div> -->
           <!-- Toggle Buttons -->
-          <!-- <div id="filterButtons" class="mb-6">
-
-            <button class="btn btn-primary filter-btn" data-filter="all">
-              All
-            </button>
-
-            <button
-              class="btn bg-base-100 text-gray-500 filter-btn mx-3"
-              data-filter="interview"
-            >
-              Interview
-            </button>
-
-            <button
-              class="btn bg-base-100 text-gray-500 filter-btn"
-              data-filter="rejected"
-            >
-              Rejected
-            </button>
-          </div> -->
           <div id="filterButtons" class="mb-6 flex gap-3">
             <button
               class="btn btn-primary filter-btn transition-all duration-300"
@@ -118,9 +90,9 @@
           </div>
         </div>
         <!-- available jobs cards container -->
-        <div class="space-y-5">
+        <div id="jobs-container" class="space-y-5">
           <!-- available jobs card 1 -->
-          <div class="card bg-base-100 shadow-md">
+          <div class="card bg-base-100 shadow-md job-card">
             <div class="card-body">
               <div class="flex justify-between items-start">
                 <div>
