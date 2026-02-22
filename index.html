@@ -47,7 +47,9 @@
         </div>
         <div class="bg-green-100 p-5 rounded-lg">
           <p class="text-[14px] font-medium text-gray-600">Interview</p>
-          <p class="text-2xl font-bold text-green-500" id="interview-count">0</p>
+          <p class="text-2xl font-bold text-green-500" id="interview-count">
+            0
+          </p>
         </div>
         <div class="bg-red-100 p-5 rounded-lg">
           <p class="text-[14px] font-medium text-gray-600">Rejected</p>
@@ -66,7 +68,9 @@
             <h3 class="flex-1 text-3xl text-gray-700 font-bold">
               Available Jobs
             </h3>
-            <p class="font-medium text-gray-400"><span class="total-count">0</span> jobs</p>
+            <p class="font-medium text-gray-400">
+              <span class="total-count">0</span> jobs
+            </p>
           </div>
           <!-- Toggle Buttons -->
           <div id="filterButtons" class="mb-6 flex gap-3">
@@ -92,7 +96,11 @@
         <!-- available jobs cards container -->
         <div id="jobs-container" class="space-y-5">
           <!-- available jobs card 1 -->
-          <div class="card bg-base-100 shadow-md job-card">
+          <div
+            class="card bg-base-100 shadow-md job-card"
+            data-id="1"
+            data-status="none"
+          >
             <div class="card-body">
               <div class="flex justify-between items-start">
                 <div>
@@ -119,17 +127,23 @@
               </p>
 
               <div class="card-actions justify-end mt-3">
-                <button class="btn btn-outline btn-success btn-sm">
+                <button
+                  class="btn btn-outline btn-success btn-sm interview-btn"
+                >
                   Interview
                 </button>
-                <button class="btn btn-outline btn-error btn-sm">
+                <button class="btn btn-outline btn-error btn-sm reject-btn">
                   Rejected
                 </button>
               </div>
             </div>
           </div>
           <!-- available jobs card 2 -->
-          <div class="card bg-base-100 shadow-md">
+          <div
+            class="card bg-base-100 shadow-md job-card"
+            data-id="2"
+            data-status="none"
+          >
             <div class="card-body">
               <div class="flex justify-between items-start">
                 <div>
@@ -156,17 +170,23 @@
               </p>
 
               <div class="card-actions justify-end mt-3">
-                <button class="btn btn-outline btn-success btn-sm">
+                <button
+                  class="btn btn-outline btn-success btn-sm interview-btn"
+                >
                   Interview
                 </button>
-                <button class="btn btn-outline btn-error btn-sm">
+                <button class="btn btn-outline btn-error btn-sm reject-btn">
                   Rejected
                 </button>
               </div>
             </div>
           </div>
           <!-- available jobs card 3 -->
-          <div class="card bg-base-100 shadow-md">
+          <div
+            class="card bg-base-100 shadow-md job-card"
+            data-id="3"
+            data-status="none"
+          >
             <div class="card-body">
               <div class="flex justify-between items-start">
                 <div>
@@ -193,17 +213,23 @@
               </p>
 
               <div class="card-actions justify-end mt-3">
-                <button class="btn btn-outline btn-success btn-sm">
+                <button
+                  class="btn btn-outline btn-success btn-sm interview-btn"
+                >
                   Interview
                 </button>
-                <button class="btn btn-outline btn-error btn-sm">
+                <button class="btn btn-outline btn-error btn-sm reject-btn">
                   Rejected
                 </button>
               </div>
             </div>
           </div>
           <!-- available jobs card 4 -->
-          <div class="card bg-base-100 shadow-md">
+          <div
+            class="card bg-base-100 shadow-md job-card"
+            data-id="4"
+            data-status="none"
+          >
             <div class="card-body">
               <div class="flex justify-between items-start">
                 <div>
@@ -230,17 +256,23 @@
               </p>
 
               <div class="card-actions justify-end mt-3">
-                <button class="btn btn-outline btn-success btn-sm">
+                <button
+                  class="btn btn-outline btn-success btn-sm interview-btn"
+                >
                   Interview
                 </button>
-                <button class="btn btn-outline btn-error btn-sm">
+                <button class="btn btn-outline btn-error btn-sm reject-btn">
                   Rejected
                 </button>
               </div>
             </div>
           </div>
           <!-- available jobs card 5 -->
-          <div class="card bg-base-100 shadow-md">
+          <div
+            class="card bg-base-100 shadow-md job-card"
+            data-id="5"
+            data-status="none"
+          >
             <div class="card-body">
               <div class="flex justify-between items-start">
                 <div>
@@ -265,17 +297,23 @@
               </p>
 
               <div class="card-actions justify-end mt-3">
-                <button class="btn btn-outline btn-success btn-sm">
+                <button
+                  class="btn btn-outline btn-success btn-sm interview-btn"
+                >
                   Interview
                 </button>
-                <button class="btn btn-outline btn-error btn-sm">
+                <button class="btn btn-outline btn-error btn-sm reject-btn">
                   Rejected
                 </button>
               </div>
             </div>
           </div>
           <!-- available jobs card 6 -->
-          <div class="card bg-base-100 shadow-md">
+          <div
+            class="card bg-base-100 shadow-md job-card"
+            data-id="6"
+            data-status="none"
+          >
             <div class="card-body">
               <div class="flex justify-between items-start">
                 <div>
@@ -300,17 +338,23 @@
               </p>
 
               <div class="card-actions justify-end mt-3">
-                <button class="btn btn-outline btn-success btn-sm">
+                <button
+                  class="btn btn-outline btn-success btn-sm interview-btn"
+                >
                   Interview
                 </button>
-                <button class="btn btn-outline btn-error btn-sm">
+                <button class="btn btn-outline btn-error btn-sm reject-btn">
                   Rejected
                 </button>
               </div>
             </div>
           </div>
           <!-- available jobs card 7 -->
-          <div class="card bg-base-100 shadow-md">
+          <div
+            class="card bg-base-100 shadow-md job-card"
+            data-id="7"
+            data-status="none"
+          >
             <div class="card-body">
               <div class="flex justify-between items-start">
                 <div>
@@ -337,17 +381,23 @@
               </p>
 
               <div class="card-actions justify-end mt-3">
-                <button class="btn btn-outline btn-success btn-sm">
+                <button
+                  class="btn btn-outline btn-success btn-sm interview-btn"
+                >
                   Interview
                 </button>
-                <button class="btn btn-outline btn-error btn-sm">
+                <button class="btn btn-outline btn-error btn-sm reject-btn">
                   Rejected
                 </button>
               </div>
             </div>
           </div>
           <!-- available jobs card 8 -->
-          <div class="card bg-base-100 shadow-md">
+          <div
+            class="card bg-base-100 shadow-md job-card"
+            data-id="8"
+            data-status="none"
+          >
             <div class="card-body">
               <div class="flex justify-between items-start">
                 <div>
@@ -372,14 +422,35 @@
               </p>
 
               <div class="card-actions justify-end mt-3">
-                <button class="btn btn-outline btn-success btn-sm">
+                <button
+                  class="btn btn-outline btn-success btn-sm interview-btn"
+                >
                   Interview
                 </button>
-                <button class="btn btn-outline btn-error btn-sm">
+                <button class="btn btn-outline btn-error btn-sm reject-btn">
                   Rejected
                 </button>
               </div>
             </div>
+          </div>
+        </div>
+        <div id="interview-container" class="space-y-5 hidden">
+          <!-- Empty State -->
+          <div class="empty-state text-center py-10">
+            <img src="empty.png" class="mx-auto w-20 mb-4" />
+            <h3 class="text-xl font-semibold">No jobs available</h3>
+            <p class="text-gray-400">
+              Check back soon for new job opportunities
+            </p>
+          </div>
+        </div>
+        <div id="rejected-container" class="space-y-5 hidden">
+          <div class="empty-state text-center py-10">
+            <img src="empty.png" class="mx-auto w-20 mb-4" />
+            <h3 class="text-xl font-semibold">No jobs available</h3>
+            <p class="text-gray-400">
+              Check back soon for new job opportunities
+            </p>
           </div>
         </div>
       </section>
