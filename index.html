@@ -68,13 +68,53 @@
             </h3>
             <p class="font-medium text-gray-400"><span>8</span> jobs</p>
           </div>
-          <!-- toggle buttons -->
+          <!-- toggle buttons
           <div>
             <button class="btn btn-primary">All</button>
             <button class="btn bg-base-100 text-gray-500 mx-3">
               Interview
             </button>
             <button class="btn bg-base-100 text-gray-500">Rejected</button>
+          </div> -->
+          <!-- Toggle Buttons -->
+          <!-- <div id="filterButtons" class="mb-6">
+
+            <button class="btn btn-primary filter-btn" data-filter="all">
+              All
+            </button>
+
+            <button
+              class="btn bg-base-100 text-gray-500 filter-btn mx-3"
+              data-filter="interview"
+            >
+              Interview
+            </button>
+
+            <button
+              class="btn bg-base-100 text-gray-500 filter-btn"
+              data-filter="rejected"
+            >
+              Rejected
+            </button>
+          </div> -->
+          <div id="filterButtons" class="mb-6 flex gap-3">
+            <button
+              class="btn btn-primary filter-btn transition-all duration-300"
+            >
+              All
+            </button>
+
+            <button
+              class="btn bg-base-100 text-gray-500 filter-btn transition-all duration-300"
+            >
+              Interview
+            </button>
+
+            <button
+              class="btn bg-base-100 text-gray-500 filter-btn transition-all duration-300"
+            >
+              Rejected
+            </button>
           </div>
         </div>
         <!-- available jobs cards container -->
@@ -372,5 +412,6 @@
         </div>
       </section>
     </main>
+    <script src="script/script.js"></script>
   </body>
 </html>
