@@ -60,8 +60,9 @@
     </header>
     <!-- main section -->
     <main>
-      <!-- available jobs section -->
-      <section class="space-y-5">
+      <!-- available jobs header section with toggle buttons -->
+      <section>
+        <!-- available jobs header container -->
         <div class="space-y-5">
           <!-- available jobs header -->
           <div class="flex items-center">
@@ -93,6 +94,9 @@
             </button>
           </div>
         </div>
+      </section>
+      <!-- available jobs section -->
+      <section class="space-y-5">
         <!-- available jobs cards container -->
         <div id="jobs-container" class="space-y-5">
           <!-- available jobs card 1 -->
@@ -104,24 +108,30 @@
             <div class="card-body">
               <div class="flex justify-between items-start">
                 <div>
-                  <h2 class="card-title text-xl">TechNova Solutions</h2>
-                  <p class="text-gray-500 font-semibold">
+                  <h2 class="card-title text-xl company-name">
+                    TechNova Solutions
+                  </h2>
+                  <p class="text-gray-500 font-semibold job-role">
                     Frontend Developer (React)
                   </p>
                   <p class="text-sm text-gray-500">
-                    Dhaka · Full-time · ৳60,000 - ৳90,000
+                    <span class="location">Dhaka</span> ·
+                    <span class="job-type">Full-time</span> ·
+                    <span class="salary">৳60,000 - ৳90,000</span>
                   </p>
                 </div>
-                <button class="btn btn-circle btn-sm btn-ghost">
+                <button class="btn btn-circle">
                   <i class="fa-solid fa-trash"></i>
                 </button>
               </div>
 
               <div class="mt-2">
-                <div class="badge badge-soft badge-info">NOT APPLIED</div>
+                <div class="badge badge-soft badge-info job-status">
+                  NOT APPLIED
+                </div>
               </div>
 
-              <p class="text-gray-600 mt-2">
+              <p class="text-gray-600 mt-2 job-description">
                 Develop responsive web applications using React and Tailwind
                 CSS. Collaborate with backend engineers to integrate REST APIs.
               </p>
@@ -147,12 +157,14 @@
             <div class="card-body">
               <div class="flex justify-between items-start">
                 <div>
-                  <h2 class="card-title text-xl">DataSoft Ltd</h2>
-                  <p class="text-gray-500 font-semibold">
+                  <h2 class="card-title text-xl company-name">DataSoft Ltd</h2>
+                  <p class="text-gray-500 font-semibold job-role">
                     Node.js Backend Developer
                   </p>
                   <p class="text-sm text-gray-500">
-                    Remote · Full-time · $90,000 - $120,000
+                    <span class="location">Remote</span> ·
+                    <span class="job-type">Full-time</span> ·
+                    <span class="salary">$90,000 - $120,000</span>
                   </p>
                 </div>
                 <button class="btn btn-circle btn-sm btn-ghost">
@@ -161,10 +173,12 @@
               </div>
 
               <div class="mt-2">
-                <div class="badge badge-soft badge-info">NOT APPLIED</div>
+                <div class="badge badge-soft badge-info job-status">
+                  NOT APPLIED
+                </div>
               </div>
 
-              <p class="text-gray-600 mt-2">
+              <p class="text-gray-600 mt-2 job-description">
                 Design scalable backend services using Node.js and MongoDB.
                 Implement authentication and payment gateway integrations.
               </p>
@@ -190,12 +204,14 @@
             <div class="card-body">
               <div class="flex justify-between items-start">
                 <div>
-                  <h2 class="card-title text-xl">SoftEdge BD</h2>
-                  <p class="text-gray-500 font-semibold">
+                  <h2 class="card-title text-xl company-name">SoftEdge BD</h2>
+                  <p class="text-gray-500 font-semibold job-role">
                     Junior Web Developer
                   </p>
                   <p class="text-sm text-gray-500">
-                    Khulna · Full-time · ৳30,000 - ৳45,000
+                    <span class="location">Khulna</span> ·
+                    <span class="job-type">Full-time</span> ·
+                    <span class="salary">৳30,000 - ৳45,000</span>
                   </p>
                 </div>
                 <button class="btn btn-circle btn-sm btn-ghost">
@@ -204,10 +220,12 @@
               </div>
 
               <div class="mt-2">
-                <div class="badge badge-soft badge-info">NOT APPLIED</div>
+                <div class="badge badge-soft badge-info job-status">
+                  NOT APPLIED
+                </div>
               </div>
 
-              <p class="text-gray-600 mt-2">
+              <p class="text-gray-600 mt-2 job-description">
                 Assist in building websites using HTML, CSS, JavaScript, and
                 PHP. Fix bugs and improve performance.
               </p>
@@ -233,12 +251,16 @@
             <div class="card-body">
               <div class="flex justify-between items-start">
                 <div>
-                  <h2 class="card-title text-xl">NextWave Technologies</h2>
-                  <p class="text-gray-500 font-semibold">
+                  <h2 class="card-title text-xl company-name">
+                    NextWave Technologies
+                  </h2>
+                  <p class="text-gray-500 font-semibold job-role">
                     Full Stack Developer (MERN)
                   </p>
                   <p class="text-sm text-gray-500">
-                    Dhaka · Hybrid · ৳80,000 - ৳120,000
+                    <span class="location">Dhaka</span> ·
+                    <span class="job-type">Hybrid</span> ·
+                    <span class="salary">৳80,000 - ৳120,000</span>
                   </p>
                 </div>
                 <button class="btn btn-circle btn-sm btn-ghost">
@@ -247,10 +269,12 @@
               </div>
 
               <div class="mt-2">
-                <div class="badge badge-soft badge-info">NOT APPLIED</div>
+                <div class="badge badge-soft badge-info job-status">
+                  NOT APPLIED
+                </div>
               </div>
 
-              <p class="text-gray-600 mt-2">
+              <p class="text-gray-600 mt-2 job-description">
                 Build and maintain full-stack applications using MongoDB,
                 Express, React, and Node.js. Participate in Agile development.
               </p>
@@ -276,10 +300,16 @@
             <div class="card-body">
               <div class="flex justify-between items-start">
                 <div>
-                  <h2 class="card-title text-xl">Creative Pixel Agency</h2>
-                  <p class="text-gray-500 font-semibold">UI/UX Designer</p>
+                  <h2 class="card-title text-xl company-name">
+                    Creative Pixel Agency
+                  </h2>
+                  <p class="text-gray-500 font-semibold job-role">
+                    UI/UX Designer
+                  </p>
                   <p class="text-sm text-gray-500">
-                    Remote · Contract · $2,000/month
+                    <span class="location">Remote</span> ·
+                    <span class="job-type">Contract</span> ·
+                    <span class="salary">$2,000/month</span>
                   </p>
                 </div>
                 <button class="btn btn-circle btn-sm btn-ghost">
@@ -288,10 +318,12 @@
               </div>
 
               <div class="mt-2">
-                <div class="badge badge-soft badge-info">NOT APPLIED</div>
+                <div class="badge badge-soft badge-info job-status">
+                  NOT APPLIED
+                </div>
               </div>
 
-              <p class="text-gray-600 mt-2">
+              <p class="text-gray-600 mt-2 job-description">
                 Design user-centered interfaces for SaaS platforms. Create
                 wireframe, prototypes, and design systems.
               </p>
@@ -317,10 +349,16 @@
             <div class="card-body">
               <div class="flex justify-between items-start">
                 <div>
-                  <h2 class="card-title text-xl">CloudSync Systems</h2>
-                  <p class="text-gray-500 font-semibold">DevOps Engineer</p>
+                  <h2 class="card-title text-xl company-name">
+                    CloudSync Systems
+                  </h2>
+                  <p class="text-gray-500 font-semibold job-role">
+                    DevOps Engineer
+                  </p>
                   <p class="text-sm text-gray-500">
-                    Remote · $110,000 - $150,000
+                    <span class="location">USA</span> .
+                    <span class="job-type">Remote</span> ·
+                    <span class="salary">$110,000 - $150,000</span>
                   </p>
                 </div>
                 <button class="btn btn-circle btn-sm btn-ghost">
@@ -329,10 +367,12 @@
               </div>
 
               <div class="mt-2">
-                <div class="badge badge-soft badge-info">NOT APPLIED</div>
+                <div class="badge badge-soft badge-info job-status">
+                  NOT APPLIED
+                </div>
               </div>
 
-              <p class="text-gray-600 mt-2">
+              <p class="text-gray-600 mt-2 job-description">
                 Manage CI/CD pipelines and cloud infrastructure on AWS. Improve
                 deployment automation and system reliability.
               </p>
@@ -358,12 +398,16 @@
             <div class="card-body">
               <div class="flex justify-between items-start">
                 <div>
-                  <h2 class="card-title text-xl">CodeCraft Labs</h2>
-                  <p class="text-gray-500 font-semibold">
+                  <h2 class="card-title text-xl company-name">
+                    CodeCraft Labs
+                  </h2>
+                  <p class="text-gray-500 font-semibold job-role">
                     Software QA Engineer
                   </p>
                   <p class="text-sm text-gray-500">
-                    Remote · $70,000 - $95,000
+                    <span class="location">Australia</span> .
+                    <span class="job-role">Remote</span> ·
+                    <span class="salary">$70,000 - $95,000</span>
                   </p>
                 </div>
                 <button class="btn btn-circle btn-sm btn-ghost">
@@ -372,10 +416,12 @@
               </div>
 
               <div class="mt-2">
-                <div class="badge badge-soft badge-info">NOT APPLIED</div>
+                <div class="badge badge-soft badge-info job-status">
+                  NOT APPLIED
+                </div>
               </div>
 
-              <p class="text-gray-600 mt-2">
+              <p class="text-gray-600 mt-2 job-description">
                 Develop and execute automated test cases using Selenium and
                 Cypress. Ensure product quality before release.
               </p>
@@ -401,10 +447,16 @@
             <div class="card-body">
               <div class="flex justify-between items-start">
                 <div>
-                  <h2 class="card-title text-xl">Insight Analytics BD</h2>
-                  <p class="text-gray-500 font-semibold">Junior Data Analyst</p>
+                  <h2 class="card-title text-xl company-name">
+                    Insight Analytics BD
+                  </h2>
+                  <p class="text-gray-500 font-semibold job-role">
+                    Junior Data Analyst
+                  </p>
                   <p class="text-sm text-gray-500">
-                    Dhaka · Full-time · ৳50,000 - ৳75,000
+                    <span class="location">Dhaka</span> ·
+                    <span class="job-type">Full-time</span> ·
+                    <span class="salary">৳50,000 - ৳75,000</span>
                   </p>
                 </div>
                 <button class="btn btn-circle btn-sm btn-ghost">
@@ -413,10 +465,12 @@
               </div>
 
               <div class="mt-2">
-                <div class="badge badge-soft badge-info">NOT APPLIED</div>
+                <div class="badge badge-soft badge-info job-status">
+                  NOT APPLIED
+                </div>
               </div>
 
-              <p class="text-gray-600 mt-2">
+              <p class="text-gray-600 mt-2 job-description">
                 Analyze business data using SQL and Excel. Create dashboards and
                 performance reports.
               </p>
@@ -434,26 +488,11 @@
             </div>
           </div>
         </div>
-        <div id="interview-container" class="space-y-5 hidden">
-          <!-- Empty State -->
-          <div class="empty-state text-center py-10">
-            <img src="empty.png" class="mx-auto w-20 mb-4" />
-            <h3 class="text-xl font-semibold">No jobs available</h3>
-            <p class="text-gray-400">
-              Check back soon for new job opportunities
-            </p>
-          </div>
-        </div>
-        <div id="rejected-container" class="space-y-5 hidden">
-          <div class="empty-state text-center py-10">
-            <img src="empty.png" class="mx-auto w-20 mb-4" />
-            <h3 class="text-xl font-semibold">No jobs available</h3>
-            <p class="text-gray-400">
-              Check back soon for new job opportunities
-            </p>
-          </div>
-        </div>
       </section>
+      <!-- interview jobs section -->
+      <section id="interview-section" class="hidden space-y-5"></section>
+      <!-- rejected jobs section -->
+      <section id="rejected-section" class="hidden space-y-5"></section>
     </main>
     <script src="script/script.js"></script>
   </body>
