@@ -1,5 +1,5 @@
 // ============================
-// STATE (Single Source of Truth)
+// STATE
 // ============================
 let jobs = [];
 let currentStatus = "All";
@@ -34,7 +34,6 @@ function initializeJobs() {
       jobDescription: card.querySelector(".job-description")?.innerText,
       jobStatus: "Not Applied",
     };
-
     jobs.push(job);
   });
 }
@@ -64,6 +63,38 @@ buttons.forEach((button) => {
 // GLOBAL EVENT DELEGATION
 // ============================
 document.addEventListener("click", function (e) {
+  // ========================
+  // GLOBAL DELETE
+  // ========================
+  const deleteBtn = e.target.closest(".delete-btn");
+  if (deleteBtn) {
+    const card = e.target.closest(".job-card");
+    if (!card) return;
+
+    const companyName = card.querySelector(".company-name")?.innerText;
+    const jobRole = card.querySelector(".job-role")?.innerText;
+
+    // Ask for confirmation
+    const confirmed = confirm(
+      `Are you sure you want to permanently delete the job:
+      ${companyName} - ${jobRole}?
+      `,
+    );
+
+    if (!confirmed) return; // user clicked cancel
+
+    // Remove job from master array
+    jobs = jobs.filter(
+      (j) => !(j.companyName === companyName && j.jobRole === jobRole),
+    );
+
+    renderAllSections();
+    return;
+  }
+
+  // ========================
+  // INTERVIEW / REJECT BUTTON
+  // ========================
   if (
     !e.target.classList.contains("interview-btn") &&
     !e.target.classList.contains("reject-btn")
@@ -105,21 +136,23 @@ function renderAllSections() {
   let rejectedCount = 0;
 
   jobs.forEach((job) => {
-    // Always show in All
+    // All Jobs
     allContainer.appendChild(createJobCard(job));
 
+    // Interview
     if (job.jobStatus === "Interview") {
       interviewContainer.appendChild(createJobCard(job));
       interviewCount++;
     }
 
+    // Rejected
     if (job.jobStatus === "Rejected") {
       rejectedContainer.appendChild(createJobCard(job));
       rejectedCount++;
     }
   });
 
-  // ===== EMPTY STATE CHECK =====
+  // Empty state
   if (interviewCount === 0) {
     interviewContainer.innerHTML = emptyStateTemplate("No Interview Jobs Yet");
   }
@@ -152,15 +185,13 @@ function createJobCard(job) {
               <span class="salary">${job.salaryRange}</span>
             </p>
           </div>
-          <button class="btn btn-circle">
+          <button class="btn btn-circle delete-btn">
             <i class="fa-solid fa-trash"></i>
           </button>
         </div>
 
         <div class="mt-2">
-          <div class="px-3 py-1 rounded-full text-sm font-semibold ${getStatusStyle(
-            job.jobStatus,
-          )}">
+          <div class="px-3 py-1 rounded-full text-sm font-semibold ${getStatusStyle(job.jobStatus)}">
             ${job.jobStatus}
           </div>
         </div>
@@ -185,27 +216,12 @@ function createJobCard(job) {
 }
 
 // ============================
-// DYNAMIC STATUS STYLING
-// ============================
-function getStatusStyle(status) {
-  if (status === "Interview") {
-    return "badge badge-soft badge-success";
-  }
-
-  if (status === "Rejected") {
-    return "badge badge-soft badge-error";
-  }
-
-  return "badge badge-soft badge-info";
-}
-
-// ============================
 // EMPTY STATE TEMPLATE
 // ============================
 function emptyStateTemplate(message) {
   return `
-    <div class="empty-state text-center py-10">
-      <img src="empty.png" class="mx-auto w-20 mb-4" />
+    <div class="empty-state bg-base-100 shadow-md text-center rounded-lg py-16">
+      <i class="fa-solid fa-file-lines fa-3x"></i>
       <h3 class="text-xl font-semibold">${message}</h3>
       <p class="text-gray-400">
         Check back soon for new job opportunities
@@ -248,4 +264,17 @@ function calculateCount() {
   totalRejectedJobsCount.innerText = jobs.filter(
     (job) => job.jobStatus === "Rejected",
   ).length;
+}
+
+// ============================
+// STATUS STYLE FUNCTION
+// ============================
+function getStatusStyle(status) {
+  if (status === "Interview") {
+    return "badge badge-soft badge-success job-status";
+  }
+  if (status === "Rejected") {
+    return "badge badge-soft badge-error job-status";
+  }
+  return "badge badge-soft badge-info job-status";
 }
